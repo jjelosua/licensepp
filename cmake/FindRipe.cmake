@@ -18,6 +18,8 @@ find_path(RIPE_INCLUDE_DIR
     PATHS ${RIPE_PATHS}
 )
 
+message ("-- Ripe: " ${RIPE_USE_STATIC_LIBS})
+
 if (RIPE_USE_STATIC_LIBS)
     message ("-- Ripe: Static linking")
     find_library(RIPE_LIBRARY
