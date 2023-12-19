@@ -18,8 +18,6 @@ find_path(RIPE_INCLUDE_DIR
     PATHS ${RIPE_PATHS}
 )
 
-message ("-- Ripe: " ${RIPE_USE_STATIC_LIBS})
-
 if (RIPE_USE_STATIC_LIBS)
     message ("-- Ripe: Static linking")
     find_library(RIPE_LIBRARY
@@ -29,7 +27,7 @@ if (RIPE_USE_STATIC_LIBS)
 else()
     message ("-- Ripe: Dynamic linking")
     find_library(RIPE_LIBRARY
-        NAMES libripe.dylib
+        NAMES libripe.dylib libripe.so
         HINTS "${CMAKE_PREFIX_PATH}/lib"
     )
 endif()
