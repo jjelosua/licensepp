@@ -47,7 +47,7 @@ message ("-- Crypto++ binary: " ${CRYPTOPP_LIBRARY})
 include_directories (${CRYPTOPP_INCLUDE_DIRS})
 
 # Ripe (static)
-set(RIPE_USE_STATIC_LIBS OFF)
+set(RIPE_USE_STATIC_LIBS ON)
 find_package(Ripe REQUIRED)
 
 include_directories (${EXTERNAL_INCLUDE_DIR})
